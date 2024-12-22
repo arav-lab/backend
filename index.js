@@ -5,7 +5,13 @@ const cors = require('cors');
 // Initialize Express app
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+    origin: "https://your-frontend-domain.com", // Replace with your frontend URL
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
+  };
+app.use(cors(corsOptions));
 
 // MongoDB connection string
 const MONGO_URI = 'mongodb+srv://arav727598:gtWaud5po6Q55K1d@cluster0.zpoow.mongodb.net/';
