@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 const corsOptions = {
-    origin: "https://frontend-video-rho.vercel.app/", // Replace with your frontend URL
+    origin: "https://frontend-video-rho.vercel.app", // Replace with your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
   };
