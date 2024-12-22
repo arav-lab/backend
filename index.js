@@ -83,6 +83,10 @@ app.post('/users/video/:id', async (req, res) => {
   }
 });
 
+app.get('/', (req,res)=>{
+    res.status(200).send('Server is Runing');
+})
+
 // Start the server
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
